@@ -1,0 +1,13 @@
+<IfModule mod_rewrite.c>
+
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^foo/* /api/handlers/foo_manager.php [QSA,L]
+RewriteRule ^bar/* /api/handlers/bar_manager.php [QSA,L]
+
+</IfModule>
+
+# [QSA,L]   Append Query String, Not execute any other rule below

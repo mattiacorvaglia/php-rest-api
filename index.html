@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Project Title</title>
+  <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <div class="page-header">
+          <h1>Ajax HTTP Requests</h1>
+        </div>
+        <form class="form-inline">
+          <div class="form-group">
+            <label>Resource:</label>
+            <select id="resource" class="form-control">
+              <option>foo</option>
+              <option>bar</option>
+            </select>
+          </div>
+        </form><br>
+        <strong>Corrects:</strong>
+        <button id="get" class="btn btn-sm btn-default" type="button">GET</button>
+        <button id="getid" class="btn btn-sm btn-default" type="button">GET by ID</button>
+        <button id="post" class="btn btn-sm btn-default" type="button">POST</button>
+        <button id="put" class="btn btn-sm btn-default" type="button">PUT</button>
+        <button id="delete" class="btn btn-sm btn-default" type="button">DELETE</button>
+        <br><br>
+        <strong>Uncorrects:</strong>
+        <button id="postwrong" class="btn btn-sm btn-default" type="button">POST</button>
+        <button id="putwrong" class="btn btn-sm btn-default" type="button">PUT</button>
+        <button id="deletewrong" class="btn btn-sm btn-default" type="button">DELETE</button>
+        <button id="wrong" class="btn btn-sm btn-default" type="button">HEAD</button>
+        <br><br>
+        <div id="res"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Load vendor libraries -->
+  <script
+    src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
+  <script
+    src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
+
+  <!-- Load application scripts -->
+  <script src="assets/js/script.js" charset="utf-8"></script>
+
+</body>
+</html>
