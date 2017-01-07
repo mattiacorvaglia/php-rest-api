@@ -1,8 +1,14 @@
 <?php
 /**
- * @author Mattia Corvaglia <corvagliamattia@gmail.com>
- * @link http://mattiacorvaglia.com
- */
+* Bar resource handler
+*
+* @author     Mattia Corvaglia <corvagliamattia@gmail.com>
+* @see        http://www.mattiacorvaglia.com
+* @version    1.0.0
+* @since      1.0.0
+* @copyright  2017 Mattia Corvaglia All Rights Reserved.
+* @license    MIT
+*/
 
 header('Content-type: application/json'); // Set the response format
 

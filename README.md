@@ -17,11 +17,12 @@ You need also to enable the use of **htaccess** files, in order to make it possi
 
 ### Installing
 
-To get the project on you machine use the git command:
+To get the project on your machine use the git command:
 ```
 git clone https://github.com/mattiacorvaglia/php_restful_api.git
 ```
+And execute the script `DB_INITIALIZATION.sql` with your MySQL client to setup the database.
 
 ## Authors
 
-**Mattia Corvaglia** - [mattiacorvaglia.com](http://mattiacorvaglia.com)
+**Mattia Corvaglia** - [corvagliamattia@gmail.com](mailto:corvagliamattia@gmail.com) - [mattiacorvaglia.com](http://mattiacorvaglia.com)
