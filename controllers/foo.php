@@ -20,7 +20,11 @@ class Foo {
     $conn = db_connect();
 
     // Retrieve all the rows
-    $query = 'SELECT `id_foo`,`name`,`comment` FROM `foo`.`foo`;';
+    $query = <<<"SQL"
+SELECT `id_foo`,`name`,`comment`
+  FROM `foo`.`foo`
+  ORDER BY `name` DESC;
+SQL;
     $res = mysqli_query($conn, $query);
 
     // Check invalid query
@@ -53,8 +57,13 @@ class Foo {
     // Connect database
     $conn = db_connect();
 
-    // Retrieve the row by id
-    $query = 'SELECT `id_foo`,`name`,`comment` FROM `foo`.`foo` WHERE `id_foo`='.$id.';';
+    // Retrieve a row by id
+    $query = <<<"SQL"
+SELECT `id_foo`,`name`,`comment`
+  FROM `foo`.`foo`
+  WHERE `id_foo`='$id';
+  ORDER BY `name` DESC;
+SQL;
     $res = mysqli_query($conn, $query);
 
     // Check invalid query
@@ -83,7 +92,14 @@ class Foo {
     $conn = db_connect();
 
     // Insert a new row
-    $query = 'INSERT INTO `foo`.`foo` (`name`,`comment`) VALUES (\''.$data['name'].'\',\''.$data['comment'].'\');';
+    $query = <<<"SQL"
+INSERT INTO `foo`.`foo`
+    (`name`,`comment`)
+  VALUES (
+    '{$data['name']}',
+    '{$data['comment']}'
+  );
+SQL;
     $res = mysqli_query($conn, $query);
 
     // Check invalid query
@@ -111,8 +127,14 @@ class Foo {
     // Connect database
     $conn = db_connect();
 
-    // Insert a new row
-    $query = 'UPDATE `foo`.`foo` SET `name`=\''.$data['name'].'\',`comment`=\''.$data['comment'].'\' WHERE `id_foo`='.$id.';';
+    // Modify a row
+    $query = <<<"SQL"
+UPDATE `foo`.`foo`
+  SET `name`='{$data['name']}',
+      `comment`='{$data['comment']}'
+  WHERE `id_foo`='$id';
+SQL;
+    
     $res = mysqli_query($conn, $query);
 
     // Check invalid query
@@ -147,8 +169,11 @@ class Foo {
     // Connect database
     $conn = db_connect();
 
-    // Insert a new row
-    $query = 'DELETE FROM `foo`.`foo` WHERE `id_foo`='.$id.';';
+    // Remove a row
+    $query = <<<"SQL"
+DELETE FROM `foo`.`foo`
+  WHERE `id_foo`='$id';
+SQL;
     $res = mysqli_query($conn, $query);
 
     // Check invalid query
