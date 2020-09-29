@@ -1,12 +1,12 @@
 <IfModule mod_rewrite.c>
 
-RewriteEngine On
+  RewriteEngine On
 
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
 
-RewriteRule ^api/v1/foo/* /routes/foo.php [QSA,L]
-RewriteRule ^api/v1/bar/* /routes/bar.php [QSA,L]
+  RewriteRule ^api/v1/foo/* /routes/foo.php [QSA,L]
+  RewriteRule ^api/v1/bar/* /routes/bar.php [QSA,L]
 
 </IfModule>
 
