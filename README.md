@@ -1,6 +1,6 @@
 # RESTful API implementation in PHP
 
-Simple REST API Server written in PHP, accepting CORS Request and designed with MVC Pattern.
+Simple REST API Server written in PHP, accepting CORS Requests and designed with MVC Pattern.
 
 ## Getting Started
 
