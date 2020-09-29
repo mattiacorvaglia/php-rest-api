@@ -11,8 +11,8 @@ You need also to enable the use of **htaccess** files, in order to make it possi
 
 1. First enable the PHP module **rewrite** using this command: `sudo a2enmod rewrite`
 2. Go into the **sites-available** folder: `cd /etc/apache2/sites-available`
-3. Edit the configuration of your VirtualHost (e.g. `default.conf`) setting **AllowOverride** to `All`:
-    from
+3. Edit the configuration of your VirtualHost (e.g. `default.conf`) by setting **AllowOverride** to **All**.  
+    BEFORE
     ```
     <Directory /var/www/>
       Options Indexes FollowSymLinks
@@ -20,7 +20,7 @@ You need also to enable the use of **htaccess** files, in order to make it possi
       Require all granted
     </Directory>
     ```
-    to
+    AFTER
     ```
     <Directory /var/www/>
       Options Indexes FollowSymLinks
