@@ -10,8 +10,6 @@
 * @license    MIT
 */
 
-header('Content-type: application/json'); // Set the response format
-
 require_once "../classes/bar.php";
 $bar = new Bar();
 
@@ -84,11 +82,26 @@ switch ($_SERVER['REQUEST_METHOD']) {
     }
     break;
   // ---------------------------------------------------------------------------
+  // Respond to preflights
+  case "OPTIONS":
+    header('Access-Control-Allow-Origin: *');
+    header('Access-Control-Allow-Methods: POST, GET, OPTIONS, PUT, DELETE');
+    header('Access-Control-Allow-Headers: Origin, Content-Type');
+    exit;
+  // ---------------------------------------------------------------------------
   default:
     http_response_code(405);
     exit;
     break;
 }
+
+// -----------------------------------------------------------------------------
+// Set the headers
+header('Access-Control-Allow-Origin: *'); // Enable CORS
+header('Access-Control-Allow-Methods: POST, GET, OPTIONS, PUT, DELETE');
+header('Access-Control-Allow-Headers: Origin, Content-Type');
+header('Content-type: application/json'); // Response format
+
 // -----------------------------------------------------------------------------
 // Return JSON response
 http_response_code(200);
