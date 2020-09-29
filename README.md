@@ -1,6 +1,6 @@
 # RESTful API implementation in PHP
 
-Simple REST API Server written in PHP, accepting CORS Request and respecting the MVC Pattern.
+Simple REST API Server written in PHP, accepting CORS Request and designed with MVC Pattern.
 
 ## Getting Started
 
@@ -30,7 +30,6 @@ You need also to enable the use of **htaccess** files, in order to make it possi
     ```
 
 4. Restart Apache: `sudo service apache2 restart`
-5. Execute the script `DB_INITIALIZATION.sql` with your MySQL client to setup the database.
 
 ### Alternatives
 
@@ -38,6 +37,7 @@ You can avoid using htaccess by configuring directly the Apache configuration.
 
 1. Go into the **sites-available** folder: `cd /etc/apache2/sites-available`
 2. Edit the Apache configuration (e.g. `default.conf`)
+    AFTER
     ```
     <Directory "/var/www/html/">
 
@@ -59,6 +59,7 @@ You can avoid using htaccess by configuring directly the Apache configuration.
 
     </Directory>
     ```
+3. Restart Apache: `sudo service apache2 restart`
 
 
 ## Authors
