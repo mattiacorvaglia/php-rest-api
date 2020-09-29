@@ -10,10 +10,26 @@ To run this project you need the **LAMP** server to be installed on your machine
 You need also to enable the use of **htaccess** files, in order to make it possible follow these simple steps:
 
 1. First enable the PHP module **rewrite** using this command: `sudo a2enmod rewrite`
-2. Restart Apache: `sudo service apache2 restart`
-3. Go into the **sites-available** folder: `cd /etc/apache2/sites-available`
-4. Edit the configuration of your VirtualHost (e.g. `default.conf`) by changing `AllowOverride None` to `AllowOverride All`.  
-   There are two lines where this change has to be made.
+2. Go into the **sites-available** folder: `cd /etc/apache2/sites-available`
+3. Edit the configuration of your VirtualHost (e.g. `default.conf`) setting **AllowOverride** to `All`:
+    from
+    ```
+    <Directory /var/www/>
+      Options Indexes FollowSymLinks
+      AllowOverride None
+      Require all granted
+    </Directory>
+    ```
+    to
+    ```
+    <Directory /var/www/>
+      Options Indexes FollowSymLinks
+      AllowOverride All
+      Require all granted
+    </Directory>
+    ```
+
+4. Restart Apache: `sudo service apache2 restart`
 
 ### Installing
 
