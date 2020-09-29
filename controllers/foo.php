@@ -10,7 +10,7 @@
  * @license    MIT
  */
 
-require_once "../handlers/db_manager.php";
+require_once "../datasource.php";
 
 class Foo {
 

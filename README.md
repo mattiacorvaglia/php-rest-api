@@ -1,4 +1,4 @@
-# RESTful API in PHP
+# RESTful API implementation in PHP
 
 Simple PHP web service implementation with client interaction using AJAX requests.
 
@@ -12,7 +12,7 @@ You need also to enable the use of **htaccess** files, in order to make it possi
 1. First enable the PHP module **rewrite** using this command: `sudo a2enmod rewrite`
 2. Restart Apache: `sudo service apache2 restart`
 3. Go into the **sites-available** folder: `cd /etc/apache2/sites-available`
-4. Edit the file named `default.conf` and change `AllowOverride None` to `AllowOverride All`.  
+4. Edit the configuration of your VirtualHost (e.g. `default.conf`) by changing `AllowOverride None` to `AllowOverride All`.  
    There are two lines where this change has to be made.
 
 ### Installing
