@@ -5,8 +5,8 @@ RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 
-RewriteRule ^foo/* /api/routes/foo.php [QSA,L]
-RewriteRule ^bar/* /api/routes/bar.php [QSA,L]
+RewriteRule ^api/v1/foo/* /routes/foo.php [QSA,L]
+RewriteRule ^api/v1/bar/* /routes/bar.php [QSA,L]
 
 </IfModule>
 

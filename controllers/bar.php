@@ -10,7 +10,7 @@
  * @license    MIT
  */
 
-require_once "../datasource.php";
+require_once "../data/datasource.php";
 
 class Bar {
 
