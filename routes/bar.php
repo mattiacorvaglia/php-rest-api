@@ -87,7 +87,9 @@ switch ($_SERVER['REQUEST_METHOD']) {
     header('Access-Control-Allow-Origin: *'); // Enable CORS
     header('Access-Control-Allow-Methods: POST, GET, OPTIONS, PUT, DELETE');
     header('Access-Control-Allow-Headers: Origin, Content-Type');
+    http_response_code(200);
     exit;
+    break;
   // ---------------------------------------------------------------------------
   default:
     http_response_code(405);
